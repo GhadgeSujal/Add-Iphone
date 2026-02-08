@@ -1,0 +1,25 @@
+.box{ padding: 22px; }
+.contact-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+.mini{ padding: 16px; }
+.form{ padding: 16px; display:grid; gap: 10px; }
+label{ display:grid; gap: 6px; font-weight: 600; }
+input, textarea{
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,.10);
+  background: rgba(255,255,255,.9);
+  outline:none;
+}
+
+button[disabled]{
+  opacity: .7;
+  cursor: not-allowed;
+}
+
+.status{
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+.status.ok{ color: rgba(0,0,0,.72); }
+@media (max-width: 900px){ .contact-grid{ grid-template-columns: 1fr; } }

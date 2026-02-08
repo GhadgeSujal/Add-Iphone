@@ -1,0 +1,64 @@
+<section class="section">
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero glass" [attr.data-theme]="theme" data-aos="fade-up">
+            <div class="copy">
+                <div class="kicker">APPLE INSPIRED • LIGHT THEME • ANIMATED</div>
+                <div class="h1">Sleek. Powerful.<br />Beautiful by design.</div>
+                <p class="p">
+                    Experience the future of mobile innovation with <b>iPhone 17 Pro Max</b>. 
+                    Crafted for creators, professionals, and enthusiasts, with smooth page transitions, 
+                    dynamic scroll animations, and an immersive user experience.
+                </p>
+                <div class="actions">
+                    <a class="btn primary" routerLink="/buy">
+                        <i class="fa-solid fa-bag-shopping"></i> Pre‑order Now
+                    </a>
+                    <a class="btn" routerLink="/features">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Explore Features
+                    </a>
+                </div>
+            </div>
+
+            <div class="mock" data-aos="zoom-in">
+                <div class="phone">
+                    <div class="shine"></div>
+
+                    <img class="phone-img" [class.fade]="isFading" [src]="currentIphoneSrc" alt="iPhone 17 Pro Max" />
+
+                    <div class="chip glass">
+                        <b>iPhone 17 Pro Max</b>
+                        <div class="sub">Premium Concept • Angular</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mini Features Section -->
+        <div class="mini-section" data-aos="fade-up">
+            <div class="grid-3">
+                <div class="card glass tilt">
+                    <i class="fa-solid fa-bolt icon"></i>
+                    <h3>Lightning-Fast Performance</h3>
+                    <p class="p">
+                        Optimized structure with fluid transitions ensures a seamless, responsive UI.
+                    </p>
+                </div>
+                <div class="card glass tilt">
+                    <i class="fa-solid fa-camera icon"></i>
+                    <h3>Pro-Level Design</h3>
+                    <p class="p">
+                        Crisp typography, gallery grids, and intuitive layout deliver a premium Apple-style experience.
+                    </p>
+                </div>
+                <div class="card glass tilt">
+                    <i class="fa-solid fa-sparkles icon"></i>
+                    <h3>Immersive Motion</h3>
+                    <p class="p">
+                        Smooth scroll animations, micro-interactions, and AOS-powered motion elevate every interaction.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

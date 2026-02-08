@@ -1,0 +1,11 @@
+.foot{
+  padding: 18px;
+  display:flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+.small{ color: var(--muted); font-size: 13px; }
+@media (max-width: 720px){
+  .foot{ flex-direction: column; align-items: flex-start; }
+}

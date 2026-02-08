@@ -1,0 +1,34 @@
+<header class="nav">
+  <div class="container nav-inner glass">
+
+    <!-- Brand / Logo -->
+    <a class="brand" routerLink="/" aria-label="Home">
+      <!-- Apple PNG logo from assets folder -->
+      <img src="assets/gallery/apple-logo.png" alt="Apple Logo" class="logo" />
+      <span>Apple.com</span>
+    </a>
+
+    <!-- Mobile Menu Toggle -->
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Toggle navigation menu"
+      aria-expanded="{{ menuOpen }}"
+      (click)="menuOpen = !menuOpen"
+    >
+      ☰
+    </button>
+
+    <!-- Navigation Links -->
+    <nav class="links" [class.open]="menuOpen" aria-label="Main navigation">
+      <a routerLink="/about" routerLinkActive="active" routerLinkActive="{ exact: true }" (click)="closeMenu()">About</a>
+      <a routerLink="/features" routerLinkActive="active" (click)="closeMenu()">Features</a>
+      <a routerLink="/gallery" routerLinkActive="active" (click)="closeMenu()">Gallery</a>
+      <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
+      <a routerLink="/buy" class="btn primary" (click)="closeMenu()">
+        <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i> Buy
+      </a>
+    </nav>
+
+  </div>
+</header>

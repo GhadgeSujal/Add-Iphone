@@ -1,0 +1,76 @@
+<section class="section">
+  <div class="container">
+    <div class="glass top" data-aos="fade-up">
+      <div class="kicker">BUY iPHONE 17 PRO MAX</div>
+      <div class="h2">Reserve the future of performance</div>
+      <p class="p">
+        Secure your iPhone 17 Pro Max today and be among the first to experience Apple’s most
+        advanced smartphone ever.
+      </p>
+    </div>
+
+    <div class="grid">
+      <div class="preview glass" data-aos="zoom-in">
+        <div class="phoneWrap">
+          <img class="phoneImg" [src]="selectedImage" alt="Selected iPhone color" />
+          <div class="label">
+            <b>iPhone 17 Pro Max</b>
+            <div class="muted">{{ form.value.color }}</div>
+          </div>
+        </div>
+      </div>
+
+      <form class="glass form" (ngSubmit)="submit()" [formGroup]="form" data-aos="fade-up">
+        <label>
+          Full Name
+          <input type="text" formControlName="name" placeholder="Enter your full name" />
+          <small *ngIf="submitted && form.controls.name.invalid">
+            Please enter your full name.
+          </small>
+        </label>
+
+        <label>
+          Email
+          <input type="email" formControlName="email" placeholder="Enter your email address" />
+          <small *ngIf="submitted && form.controls.email.invalid">
+            Please enter a valid email address.
+          </small>
+        </label>
+
+        <label>
+          Finish
+          <select formControlName="color">
+            <option *ngFor="let c of colorOptions" [value]="c.value">
+              {{ c.label }}
+            </option>
+          </select>
+        </label>
+
+        <div class="swatches">
+          <button
+            class="swatch"
+            type="button"
+            *ngFor="let c of colorOptions"
+            (click)="form.controls.color.setValue(c.value)"
+            [class.on]="form.value.color === c.value"
+            title="{{ c.label }}"
+          ></button>
+        </div>
+
+        <button class="btn primary" type="submit" [disabled]="sending">
+          <i class="fa-solid fa-lock"></i>
+          <span *ngIf="!sending">Confirm Reservation</span>
+          <span *ngIf="sending">Processing…</span>
+        </button>
+
+        <p class="status ok" *ngIf="sent">
+          Reservation confirmed. We’ll be in touch soon.
+        </p>
+
+        <p class="note">
+          Availability, pricing, and delivery details will be shared via email.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>

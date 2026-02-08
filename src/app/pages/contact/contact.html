@@ -1,0 +1,52 @@
+<section class="section">
+  <div class="container">
+    <div class="glass box" data-aos="fade-up">
+      <div class="kicker">CONTACT</div>
+      <div class="h2">We’re here to help</div>
+
+      <div class="contact-grid">
+        <div class="glass mini" data-aos="fade-up" data-aos-delay="80">
+          <h3>Customer Support</h3>
+          <p class="p"><i class="fa-solid fa-envelope"></i> support@iphone17.com</p>
+          <p class="p"><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+          <p class="p">Our team is available Monday to Friday, 9 AM – 6 PM IST.</p>
+        </div>
+
+        <form class="glass form" data-aos="fade-up" data-aos-delay="140" [formGroup]="form" (ngSubmit)="send()">
+          <label>
+            Name
+            <input placeholder="Full name" formControlName="name" />
+            <small *ngIf="submitted && form.controls.name.invalid">
+              Please enter your name (at least 2 characters).
+            </small>
+          </label>
+
+          <label>
+            Email
+            <input placeholder="you@example.com" formControlName="email" />
+            <small *ngIf="submitted && form.controls.email.invalid">
+              Please enter a valid email address.
+            </small>
+          </label>
+
+          <label>
+            Message
+            <textarea rows="5" placeholder="Your message..." formControlName="message"></textarea>
+            <small *ngIf="submitted && form.controls.message.invalid">
+              Message must be at least 10 characters.
+            </small>
+          </label>
+
+          <button class="btn primary" type="submit" [disabled]="sending">
+            <span *ngIf="!sending">Send Message</span>
+            <span *ngIf="sending">Sending…</span>
+          </button>
+
+          <p class="status ok" *ngIf="sent">
+            Your message has been sent. Our team will contact you shortly.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

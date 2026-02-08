@@ -1,0 +1,34 @@
+<section class="section">
+  <div class="container">
+    <div data-aos="fade-up">
+      <div class="kicker">GALLERY</div>
+      <div class="h2">All colors. One iconic design.</div>
+      <p class="p">
+        Explore the iPhone 17 Pro Max in every finish — from polished real-life images to concept
+        renders highlighting its premium design and seamless interface.
+      </p>
+    </div>
+
+    <!-- Real phone images -->
+    <div class="grid" style="margin-top: 16px">
+      <div class="tile glass" data-aos="zoom-in" *ngFor="let it of phones; let idx = index">
+        <img class="img" [src]="it.src" [alt]="it.title" loading="lazy" />
+        <div class="cap">
+          <b>{{ it.title }}</b>
+          <div class="sub">High-resolution • Real product</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Concept shots -->
+    <div class="grid" style="margin-top: 18px">
+      <div class="tile glass" data-aos="fade-up" *ngFor="let it of shots; let idx = index">
+        <img class="img" [src]="it.src" [alt]="it.title" loading="lazy" />
+        <div class="cap">
+          <b>{{ it.title }}</b>
+          <div class="sub">Concept render • Premium light theme</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
